@@ -1,4 +1,4 @@
-package com.example.shriyanshu.wifisharefilesexampleandroid;
+package com.example.easyshare;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
