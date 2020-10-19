@@ -1,4 +1,4 @@
-package com.example.shriyanshu.wifisharefilesexampleandroid;
+package com.example.easyshare;
 
 import android.content.Context;
 import android.database.Cursor;
