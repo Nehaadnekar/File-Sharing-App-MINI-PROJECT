@@ -16,7 +16,7 @@ public class CommonMethods {
 			CommonMethods.e("", "uri is null");
 			return null;
 		}
-		// this will only work for images selected from gallery
+		// this will only work for images that are selected from gallery
 		String[] projection = { MediaStore.Images.Media.DATA };
 		Cursor cursor = context.getContentResolver().query(uri, projection, null, null, null);
 		CommonMethods.e("", "get path method->> after cursor init");
@@ -38,8 +38,6 @@ public class CommonMethods {
     }
     public static void e(String tag, String msg){
     	Log.e(tag, msg);
-    }
-   
-    
+    }  
 
 }
