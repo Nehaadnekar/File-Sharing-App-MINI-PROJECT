@@ -1,4 +1,4 @@
-
+package com.example.easyshare;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
