@@ -1,4 +1,4 @@
-package com.example.EasyShare;
+package com.example.easyshare;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
