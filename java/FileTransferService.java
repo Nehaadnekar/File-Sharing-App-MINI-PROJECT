@@ -44,7 +44,7 @@ public class FileTransferService extends IntentService {
 
     @Override
     public void onCreate() {
-    	// TODO Auto-generated method stub
+    	
     	super.onCreate();
     	mHandler = new Handler();
     }
@@ -62,11 +62,11 @@ public class FileTransferService extends IntentService {
             String filelength = intent.getExtras().getString(Filelength);
 
             try {
-                //Log.d(MainActivity.TAG, "Opening client socket - ");
+                //( "Opening client socket - ");
                 socket.bind(null);
                 socket.connect((new InetSocketAddress(host, port)), SOCKET_TIMEOUT);
 
-                //Log.d(MainActivity.TAG, "Client socket - " + socket.isConnected());
+                //( "Client socket - " + socket.isConnected());
                 OutputStream stream = socket.getOutputStream();
                 ContentResolver cr = context.getContentResolver();
                 InputStream is = null;
@@ -86,19 +86,19 @@ public class FileTransferService extends IntentService {
                 try {
                     is = cr.openInputStream(Uri.parse(fileUri));
                 } catch (FileNotFoundException e) {
-                    //Log.d(MainActivity.TAG, e.toString());
+                    
                 }
                 DeviceDetailFragment.copyFile(is, stream);
-                //Log.d(MainActivity.TAG, "Client: Data written");
+                //("Client: Data written")
                 oos.close();	//close the ObjectOutputStream after sending data.
             } catch (IOException e) {
-                //Log.e(MainActivity.TAG, e.getMessage());
+                
                 e.printStackTrace();
                 CommonMethods.e("Unable to connect host", "service socket error in wifi filetransferservice class");
            	 mHandler.post(new Runnable() {
 					
 					public void run() {
-						// TODO Auto-generated method stub
+						
 						Toast.makeText(FileTransferService.this, "Paired Device is not Ready to receive the file", Toast.LENGTH_LONG).show();
 					}
            	 });
@@ -109,7 +109,7 @@ public class FileTransferService extends IntentService {
                         try {
                             socket.close();
                         } catch (IOException e) {
-                            // Give up
+                            
                             e.printStackTrace();
                         }
                     }
