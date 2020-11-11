@@ -1,5 +1,5 @@
-//package com.example.easyshare.wifisharefilesexampleandroid;
 
+package com.example.easyshare;
 import android.app.IntentService;
 import android.content.ContentResolver;
 import android.content.Context;
