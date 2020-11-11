@@ -17,4 +17,4 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-import com.example.shriyanshu.wifisharefilesexampleandroid.DeviceListFragment.DeviceActionListener;
+import com.example.easyshare.DeviceListFragment.DeviceActionListener;
