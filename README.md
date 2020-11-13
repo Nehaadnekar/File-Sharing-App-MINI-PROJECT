@@ -1,7 +1,7 @@
 **Update November 13, 2020**
 
 <p align="center">
-  <img src="https://github.com/Nehaadnekar/File-Sharing-App-MINI-PROJECT/blob/master/Screenshots/EasySHare.png">
+  <img src="https://github.com/Nehaadnekar/File-Sharing-App-MINI-PROJECT/blob/master/Screenshots/EasySHare.jpg">
   <a href="https://blaze.unubo.app">
     <img src="https://github.com/blenderskool/blaze/blob/master/public/images/apple-touch-icon-152x152.png">
   </a>
