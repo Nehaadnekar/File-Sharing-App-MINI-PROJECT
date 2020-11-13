@@ -20,6 +20,12 @@ EasyShare is simplest but elegant self-hosted file transfer App that allow users
  
  Large files supported.
 
+# Screenshots:
+
+![](Screenshots/Screenshot-1.png)  ![](Screenshots/Screenshot-2.png)  ![](Screenshots/Screenshot-3.png)   ![]()   ![](pictures/macDemo.png)  
+![](pictures/macDemo.png)   ![](pictures/macDemo.png)   ![](pictures/macDemo.png)   ![](pictures/macDemo.png)
+<img src="Screenshots/Screenshot-1.png" width=400> <img src="Screenshots/Screenshot-2.png" width=400> <img src="Screenshots/Screenshot-3.png" width=400> 
+<img src="pictures/linuxDemo.png" width=400>   <img src="pictures/linuxDemo.png" width=400>   <img src="pictures/linuxDemo.png" width=400>   <img src="pictures/linuxDemo.png" width=400>   <img src="pictures/linuxDemo.png" width=400>   <img src="pictures/linuxDemo.png" width=400> 
 
 # Demo 
 
