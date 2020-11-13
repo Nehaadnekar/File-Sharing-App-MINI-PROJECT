@@ -2,9 +2,6 @@
 
 <p align="center">
   <img src="https://github.com/Nehaadnekar/File-Sharing-App-MINI-PROJECT/blob/master/Screenshots/easyshare_icon.jpg">
-  <a href="https://blaze.unubo.app">
-    <img src="https://github.com/blenderskool/blaze/blob/master/public/images/apple-touch-icon-152x152.png">
-  </a>
  </p>
 
 # EasyShare - A File Sharing Android App
