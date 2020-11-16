@@ -33,18 +33,18 @@ A Demo video of EasyShare will be available soon ...
 ## Contributors
 
 - [Jitendra Singh](https://github.com/jet0499)
-- [Mani Bansal]
-- [Neha Adnekar]
-- [Prachi Bansal]
-- [Vivek Goyal]
+- [Mani Bansal](https://github.com/ManiBansal0025)
+- [Neha Adnekar](https://github.com/Nehaadnekar)
+- [Prachi Bansal](https://github.com/prachi1234bansal) 
+- [Vivek Goyal](https://github.com/vivek-goyal12)
 
 
 You can contribute by forking the project and sending pull requests. If you do, please don't forget to add your name to this list!
 
 ## Contacts
 Please do not hesitate to contact us if you have any further queries, our email address is:
-<jitendra.singh_cs18@gla.ac.in>
-<mani.bansal_cs18@gla.ac.in>
-<neha.adnekar_ca18@gla.ac.in>
-<prachi.bansal_cs18@gla.ac.in>
+<jitendra.singh_cs18@gla.ac.in>, 
+<mani.bansal_cs18@gla.ac.in>, 
+<neha.adnekar_cs18@gla.ac.in>, 
+<prachi.bansal_cs18@gla.ac.in>, 
 <vivek.goyal_cs18@gla.ac.in> .
