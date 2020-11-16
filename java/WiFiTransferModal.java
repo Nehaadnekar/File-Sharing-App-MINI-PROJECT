@@ -1,4 +1,4 @@
-package com.example.easyshare;
+package com.example.Easyshare;
 
 import java.io.Serializable;
 
