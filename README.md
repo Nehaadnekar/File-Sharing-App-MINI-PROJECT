@@ -6,19 +6,19 @@
 
 # EasyShare - A File Sharing Android App
 
-EasyShare is simplest but elegant self-hosted file transfer App that allow users to transfer file b/w multiple devices. It is an Alternative App like shareit and Xender by offering similar features.
+EasyShare is simplest but elegant self-hosted file transfer application that allow users to transfer file between multiple devices. It is an alternative application of shareit and Xender as it offers similar features.
 
 # Features:
 
  Cross-platform - Only Android platform.
  
- Transfer multiple files at once, without losing progress if the transfer is interrupted or canceled.
+ Transfer multiple files at once, without losing progress if the transfer is interrupted or cancelled.
 
- Speeds is about 2-4 mbps.
+ File transfer speed is about 2-4 mbps.
  
  Files encrypted in transit.
  
- Large files supported.
+ It supports large file transfer.
 
 # Screenshots:
 
@@ -39,10 +39,10 @@ A Demo video of EasyShare will be available soon ...
 - [Vivek Goyal](https://github.com/vivek-goyal12)
 
 
-You can contribute by forking the project and sending pull requests. If you do, please don't forget to add your name to this list!
+You can contribute in this project by forking the project and by sending pull requests. If you do so, please don't forget to add your name to contributor's list!
 
 ## Contacts
-Please do not hesitate to contact us if you have any further queries, our email address is:
+Feel free to contact us if you have any further queries, at:
 <jitendra.singh_cs18@gla.ac.in>, 
 <mani.bansal_cs18@gla.ac.in>, 
 <neha.adnekar_cs18@gla.ac.in>, 
