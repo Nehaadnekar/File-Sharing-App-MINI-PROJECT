@@ -65,10 +65,8 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         unregisterReceiver(receiver);
     }
 
-/**
-     * Remove all peers and clear all fields. This is called on
-     * BroadcastReceiver receiving a state change event.
-     */
+// Remove all peers and clear all fields. This is called on BroadcastReceiver receiving a state change event.
+     
     public void resetData() {
         DeviceListFragment fragmentList = (DeviceListFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_list);
@@ -94,9 +92,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             case R.id.action_directEnable:
                 if (manager != null && channel != null) {
 
-                    // Since this is the system wireless settings activity, it's
-                    // not going to send us a result. We will be notified by
-                    // WiFiDeviceBroadcastReceiver instead.
+                    // Since this is the system wireless settings activity, it's not going to send us a result. We will be notified by WiFiDeviceBroadcastReceiver instead.
 
                     startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                 } else {
@@ -192,11 +188,9 @@ Override
 @Override
     public void cancelDisconnect() {
 
-        /*
-         * A cancel abort request by user. Disconnect i.e. removeGroup if
-         * already connected. Else, request WifiP2pManager to abort the ongoing
-         * request
-         */
+        
+          //A cancel abort request by user. Disconnect i.e. removeGroup if already connected. Else, request WifiP2pManager to abort the ongoing request
+         
         if (manager != null) {
             final DeviceListFragment fragment = (DeviceListFragment) getFragmentManager()
                     .findFragmentById(R.id.fragment_list);
@@ -208,13 +202,13 @@ Override
 
                 manager.cancelConnect(channel, new ActionListener() {
 
-@Override
+              @Override
                     public void onSuccess() {
                         Toast.makeText(MainActivity.this, "Aborting connection",
                                 Toast.LENGTH_SHORT).show();
                     }
-@Override
-                    public void onFailure(int reasonCode) {
+              @Override
+                     public void onFailure(int reasonCode) {
                         Toast.makeText(MainActivity.this,
                                 "Connect abort request failed. Reason Code: " + reasonCode,
                                 Toast.LENGTH_SHORT).show();
