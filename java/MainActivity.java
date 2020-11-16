@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
     }
-/** register the BroadcastReceiver with the intent values to be matched */
+    //register the BroadcastReceiver with the intent values to be matched 
     @Override
     public void onResume() {
         super.onResume();
@@ -65,10 +65,8 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         unregisterReceiver(receiver);
     }
 
-/**
-     * Remove all peers and clear all fields. This is called on
-     * BroadcastReceiver receiving a state change event.
-     */
+//Remove all peers and clear all fields, this is called on BroadcastReceiver receiving a state change event.
+    
     public void resetData() {
         DeviceListFragment fragmentList = (DeviceListFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_list);
@@ -94,9 +92,8 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             case R.id.action_directEnable:
                 if (manager != null && channel != null) {
 
-                    // Since this is the system wireless settings activity, it's
-                    // not going to send us a result. We will be notified by
-                    // WiFiDeviceBroadcastReceiver instead.
+                    // Since this is the system wireless settings activity, it's not going to send us a result. 
+                    //We will be notified by WiFiDeviceBroadcastReceiver instead.
 
                     startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                 } else {
@@ -154,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             }
         });
     }
-Override
+     @Override
     public void disconnect() {
         final DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_detail);
@@ -174,3 +171,52 @@ Override
 
         });
     }
+    @Override
+    public void onChannelDisconnected() {
+        // we will try once more
+        if (manager != null && !retryChannel) {
+            Toast.makeText(this, "Channel lost. Trying again", Toast.LENGTH_LONG).show();
+            resetData();
+            retryChannel = true;
+            manager.initialize(this, getMainLooper(), this);
+        } else {
+            Toast.makeText(this,
+                    "Severe! Channel is probably lost premanently. Try Disable/Re-Enable P2P.",
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void cancelDisconnect() {
+
+        //A cancel abort request by user. Disconnect i.e. removeGroup if already connected. Else, request WifiP2pManager to abort the ongoing request
+         
+        if (manager != null) {
+            final DeviceListFragment fragment = (DeviceListFragment) getFragmentManager()
+                    .findFragmentById(R.id.fragment_list);
+            if (fragment.getDevice() == null
+                    || fragment.getDevice().status == WifiP2pDevice.CONNECTED) {
+                disconnect();
+            } else if (fragment.getDevice().status == WifiP2pDevice.AVAILABLE
+                    || fragment.getDevice().status == WifiP2pDevice.INVITED) {
+
+                manager.cancelConnect(channel, new ActionListener() {
+
+                    @Override
+                    public void onSuccess() {
+                        Toast.makeText(MainActivity.this, "Aborting connection",
+                                Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(int reasonCode) {
+                        Toast.makeText(MainActivity.this,
+                                "Connect abort request failed. Reason Code: " + reasonCode,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }
+
+    }
+}
