@@ -1,5 +1,5 @@
 
-package com.example.easyshare;
+package com.example.Easyshare;
 import android.app.IntentService;
 import android.content.ContentResolver;
 import android.content.Context;
