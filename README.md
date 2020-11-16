@@ -28,13 +28,23 @@ EasyShare is simplest but elegant self-hosted file transfer App that allow users
 
 # Demo 
 
-A Demo vedio of EasyShare will be available soon ...
+A Demo video of EasyShare will be available soon ...
 
 ## Contributors
 
 - [Jitendra Singh](https://github.com/jet0499)
+- [Mani Bansal]
+- [Neha Adnekar]
+- [Prachi Bansal]
+- [Vivek Goyal]
+
 
 You can contribute by forking the project and sending pull requests. If you do, please don't forget to add your name to this list!
 
 ## Contacts
-Please do not hesitate to contact me if you have any further questions, my email address is <jitendra.singh_cs18@gla.ac.in>.
+Please do not hesitate to contact us if you have any further queries, our email address is:
+<jitendra.singh_cs18@gla.ac.in>
+<mani.bansal_cs18@gla.ac.in>
+<neha.adnekar_ca18@gla.ac.in>
+<prachi.bansal_cs18@gla.ac.in>
+<vivek.goyal_cs18@gla.ac.in> .
