@@ -88,3 +88,29 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         return true;
     }
 
+@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_directEnable:
+                if (manager != null && channel != null) {
+
+                    // Since this is the system wireless settings activity, it's
+                    // not going to send us a result. We will be notified by
+                    // WiFiDeviceBroadcastReceiver instead.
+
+                    startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                } else {
+                    //Log.e(TAG, "channel or manager is null");
+                }
+                return true;
+
+            case R.id.action_directDiscover:
+                if (!isWifiP2pEnabled) {
+                    Toast.makeText(MainActivity.this, R.string.p2p_off_warning,
+                            Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                final DeviceListFragment fragment = (DeviceListFragment) getFragmentManager()
+                        .findFragmentById(R.id.fragment_list);
+                fragment.onInitiateDiscovery();
+                manager.discoverPeers(channel, new WifiP2pManager.ActionListener() {
