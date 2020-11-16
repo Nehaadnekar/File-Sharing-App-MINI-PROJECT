@@ -114,21 +114,28 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
                         .findFragmentById(R.id.fragment_list);
                 fragment.onInitiateDiscovery();
                 manager.discoverPeers(channel, new WifiP2pManager.ActionListener() {
-
-@Override
-                    public void onSuccess() {
-                        Toast.makeText(MainActivity.this, "Discovery Initiated",
-                                Toast.LENGTH_SHORT).show();
+              @Override
+              public void onSuccess() {
+                  Toast.makeText(MainActivity.this, "Discovery Initiated",
+                          Toast.LENGTH_SHORT).show();
                     }
-@Override
+              @Override
                     public void onFailure(int reasonCode) {
                         Toast.makeText(MainActivity.this, "Discovery Failed : " + reasonCode,
                                 Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    } 
+                  });
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    } 
+    @Override
+    public void showDetails(WifiP2pDevice device) {
+        DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
+                .findFragmentById(R.id.fragment_detail);
+        fragment.showDetails(device);
+
     }
 
+              
