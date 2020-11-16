@@ -154,3 +154,23 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             }
         });
     }
+     @Override
+    public void disconnect() {
+        final DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
+                .findFragmentById(R.id.fragment_detail);
+        fragment.resetViews();
+        manager.removeGroup(channel, new ActionListener() {
+
+            @Override
+            public void onFailure(int reasonCode) {
+               // Log.d(TAG, "Disconnect failed. Reason :" + reasonCode);
+
+            }
+
+            @Override
+            public void onSuccess() {
+                fragment.getView().setVisibility(View.GONE);
+            }
+
+        });
+    }
