@@ -207,3 +207,9 @@ Override
                     || fragment.getDevice().status == WifiP2pDevice.INVITED) {
 
                 manager.cancelConnect(channel, new ActionListener() {
+
+@Override
+                    public void onSuccess() {
+                        Toast.makeText(MainActivity.this, "Aborting connection",
+                                Toast.LENGTH_SHORT).show();
+                    }
