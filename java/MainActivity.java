@@ -120,3 +120,15 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
                         Toast.makeText(MainActivity.this, "Discovery Initiated",
                                 Toast.LENGTH_SHORT).show();
                     }
+@Override
+                    public void onFailure(int reasonCode) {
+                        Toast.makeText(MainActivity.this, "Discovery Failed : " + reasonCode,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
