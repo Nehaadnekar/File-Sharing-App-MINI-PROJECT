@@ -130,20 +130,4 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
                 return super.onOptionsItemSelected(item);
         }
     } 
-    @Override
-    public void showDetails(WifiP2pDevice device) {
-        DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
-                .findFragmentById(R.id.fragment_detail);
-        fragment.showDetails(device);
-
-    }
-
-@Override
-    public void showDetails(WifiP2pDevice device) {
-        DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
-                .findFragmentById(R.id.fragment_detail);
-        fragment.showDetails(device);
-
-    }
-
-              
+    
