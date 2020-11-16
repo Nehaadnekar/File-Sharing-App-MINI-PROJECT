@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
     }
-    //register the BroadcastReceiver with the intent values to be matched 
+/** register the BroadcastReceiver with the intent values to be matched */
     @Override
     public void onResume() {
         super.onResume();
@@ -65,8 +65,10 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         unregisterReceiver(receiver);
     }
 
-//Remove all peers and clear all fields, this is called on BroadcastReceiver receiving a state change event.
-    
+/**
+     * Remove all peers and clear all fields. This is called on
+     * BroadcastReceiver receiving a state change event.
+     */
     public void resetData() {
         DeviceListFragment fragmentList = (DeviceListFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_list);
@@ -92,8 +94,9 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             case R.id.action_directEnable:
                 if (manager != null && channel != null) {
 
-                    // Since this is the system wireless settings activity, it's not going to send us a result. 
-                    //We will be notified by WiFiDeviceBroadcastReceiver instead.
+                    // Since this is the system wireless settings activity, it's
+                    // not going to send us a result. We will be notified by
+                    // WiFiDeviceBroadcastReceiver instead.
 
                     startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                 } else {
@@ -151,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
             }
         });
     }
-     @Override
+Override
     public void disconnect() {
         final DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_detail);
