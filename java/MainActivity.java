@@ -213,3 +213,16 @@ Override
                         Toast.makeText(MainActivity.this, "Aborting connection",
                                 Toast.LENGTH_SHORT).show();
                     }
+@Override
+                    public void onFailure(int reasonCode) {
+                        Toast.makeText(MainActivity.this,
+                                "Connect abort request failed. Reason Code: " + reasonCode,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }
+
+    }
+}
+
