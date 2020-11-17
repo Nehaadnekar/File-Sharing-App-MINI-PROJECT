@@ -24,7 +24,7 @@ public class FileTransferService extends IntentService {
 	Handler mHandler;
 	
     public static final int SOCKET_TIMEOUT = 5000;
-    public static final String ACTION_SEND_FILE = "com.example.shriyanshu.wifisharefilesexampleandroid.SEND_FILE";
+    public static final String ACTION_SEND_FILE = "com.example.Easyshare.SEND_FILE";
     public static final String EXTRAS_FILE_PATH = "file_url";
     public static final String EXTRAS_GROUP_OWNER_ADDRESS = "go_host";
     public static final String EXTRAS_GROUP_OWNER_PORT = "go_port";
