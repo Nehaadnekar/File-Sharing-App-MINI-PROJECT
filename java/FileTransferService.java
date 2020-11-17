@@ -16,7 +16,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
- * A service that process each file transfer request i.e Intent by opening a
+ * A service that process each file transfer request that is, intent by opening a
  * socket connection with the WiFi Direct Group Owner and writing the file
  */
 public class FileTransferService extends IntentService {
