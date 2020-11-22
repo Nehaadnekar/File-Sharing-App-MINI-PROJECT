@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
     }
-/** register the BroadcastReceiver with the intent values to be matched */
+/*register the BroadcastReceiver with the intent values to be matched */
     @Override
     public void onResume() {
         super.onResume();
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
 // Remove all peers and clear all fields. This is called on BroadcastReceiver receiving a state change event.
      
     public void resetData() {
+        
         DeviceListFragment fragmentList = (DeviceListFragment) getFragmentManager()
                 .findFragmentById(R.id.fragment_list);
         DeviceDetailFragment fragmentDetails = (DeviceDetailFragment) getFragmentManager()
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         if (fragmentDetails != null) {
             fragmentDetails.resetViews();
         }
+        
     }
 @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
 
                     startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                 } else {
+                    
                     //Log.e(TAG, "channel or manager is null");
                 }
                 return true;
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
                             Toast.LENGTH_SHORT).show();
                     return true;
                 }
+                
                 final DeviceListFragment fragment = (DeviceListFragment) getFragmentManager()
                         .findFragmentById(R.id.fragment_list);
                 fragment.onInitiateDiscovery();
@@ -140,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
 
             @Override
             public void onSuccess() {
-                // WiFiDirectBroadcastReceiver will notify us. Ignore for now.
+                // WiFiDirectBroadcastReceiver will notify us later 
             }
 
             @Override
@@ -172,6 +176,7 @@ Override
     }
 @Override
     public void onChannelDisconnected() {
+        
         // we will try once more
         if (manager != null && !retryChannel) {
             Toast.makeText(this, "Channel lost. Trying again", Toast.LENGTH_LONG).show();
@@ -183,6 +188,7 @@ Override
                     "Severe! Channel is probably lost premanently. Try Disable/Re-Enable P2P.",
                     Toast.LENGTH_LONG).show();
         }
+        
     }
 
 @Override
