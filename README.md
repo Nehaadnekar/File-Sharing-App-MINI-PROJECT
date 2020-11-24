@@ -1,4 +1,4 @@
-**Update November 13, 2020**
+**Update November 24, 2020**
 
 <p align="center">
   <img src="https://github.com/Nehaadnekar/File-Sharing-App-MINI-PROJECT/blob/master/Screenshots/easyshare_icon.jpg">
@@ -28,7 +28,7 @@ EasyShare is simplest but elegant self-hosted file transfer application that all
 
 # Demo 
 
-A live demo of EasyShare is available on 
+A live demo of EasyShare is available on https://drive.google.com/drive/u/2/folders/1vL73YC59y8bbAFnJWZ-Msjl5RLZUh2X- 
 
 ## Contributors
 
