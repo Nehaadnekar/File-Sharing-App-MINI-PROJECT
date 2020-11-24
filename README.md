@@ -28,7 +28,7 @@ EasyShare is simplest but elegant self-hosted file transfer application that all
 
 # Demo 
 
-A live demo of EasyShare is available on https://drive.google.com/drive/u/2/folders/1vL73YC59y8bbAFnJWZ-Msjl5RLZUh2X- 
+A live demo of EasyShare is available on https://drive.google.com/file/d/1r3tKuF3PZufiYAevt6tfHYJCLCoFraBo/view?usp=sharing  
 
 ## Contributors
 
