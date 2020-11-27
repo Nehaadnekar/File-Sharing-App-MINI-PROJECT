@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         channel = manager.initialize(this, getMainLooper(), null);
     }
+    
 /*register the BroadcastReceiver with the intent values to be matched */
+    
     @Override
     public void onResume() {
         super.onResume();
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements ChannelListener, 
         unregisterReceiver(receiver);
     }
 
-// Remove all peers and clear all fields. This is called on BroadcastReceiver receiving a state change event.
+// It removes all the peers and clear all the fields, this is called on BroadcastReceiver receiving a state change event.
      
     public void resetData() {
         
